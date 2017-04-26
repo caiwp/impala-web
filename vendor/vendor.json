@@ -3,10 +3,21 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "ATEvY2YIOTZfAjfai7aRBfcZNiY=",
+			"path": "git.apache.org/thrift.git/lib/go/thrift",
+			"revision": ""
+		},
+		{
 			"checksumSHA1": "ZKxETlJdB2XubMrZnXB0FQimVA8=",
 			"path": "github.com/Sirupsen/logrus",
 			"revision": "10f801ebc38b33738c9d17d50860f484a0988ff5",
 			"revisionTime": "2017-03-17T14:32:14Z"
+		},
+		{
+			"checksumSHA1": "a2qvrN7YE4YmOpx+wmxCvCwl4os=",
+			"path": "github.com/gin-contrib/multitemplate",
+			"revision": "7d1ec4f2119934983b106718265783fc48a38b77",
+			"revisionTime": "2017-03-19T07:00:17Z"
 		},
 		{
 			"checksumSHA1": "Nd2DhWdYIG/VuG/OjXkUQcP0UE0=",
@@ -39,6 +50,48 @@
 			"revisionTime": "2017-03-31T03:19:02Z"
 		},
 		{
+			"checksumSHA1": "WADPpwK1WFuckYzPU5RAhnZrlcU=",
+			"path": "github.com/koblas/impalathing",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "fY3cKbYRz7ZmtWOvc3lVxOiNFz4=",
+			"path": "github.com/koblas/impalathing/services/beeswax",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "nWZnak4SVz4pbInlsrLbi1uyahY=",
+			"path": "github.com/koblas/impalathing/services/cli_service",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "4D2SKmJlNlT5AQilQ1dOlgcZ2yw=",
+			"path": "github.com/koblas/impalathing/services/fb303",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "pVkfQN7GQdFYZRHt4bFtgtu3wLc=",
+			"path": "github.com/koblas/impalathing/services/hive_metastore",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "kJg3YXaQUrDuc/BP/x2tIxqy+dY=",
+			"path": "github.com/koblas/impalathing/services/impalaservice",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
+			"checksumSHA1": "pfoM46Ho5/8da/nl0S79arpWRPg=",
+			"path": "github.com/koblas/impalathing/services/status",
+			"revision": "3cc75c2fe69f7066da4b4487af9a069b059d07cf",
+			"revisionTime": "2016-08-02T22:28:42Z"
+		},
+		{
 			"checksumSHA1": "b0T0Hzd+zYk+OCDTFMps+jwa/nY=",
 			"path": "github.com/manucorporat/sse",
 			"revision": "ee05b128a739a0fb76c7ebd3ae4810c1de808d6d",
@@ -51,6 +104,12 @@
 			"revisionTime": "2017-03-22T23:44:13Z"
 		},
 		{
+			"checksumSHA1": "ex6KJu8uwkG4P4PegAIrHOhVB8Q=",
+			"path": "github.com/michelloworld/ez-gin-template",
+			"revision": "16500de79a13b17b366f23fc44f0a5e75c8e8fa8",
+			"revisionTime": "2016-11-01T12:44:17Z"
+		},
+		{
 			"checksumSHA1": "Y+HGqEkYM15ir+J93MEaHdyFy0c=",
 			"path": "golang.org/x/net/context",
 			"revision": "5602c733f70afc6dcec6766be0d5034d4c4f14de",
@@ -60,12 +119,6 @@
 			"checksumSHA1": "/oZpHfYc+ZgOwYAhlvcMhmETYpw=",
 			"path": "golang.org/x/sys/unix",
 			"revision": ""
-		},
-		{
-			"checksumSHA1": "hT+7DPyl8tQ96kUXW3Sr5o0Pcj0=",
-			"path": "gopkg.in/gin-gonic/gin.v1",
-			"revision": "e2212d40c62a98b388a5eb48ecbdcf88534688ba",
-			"revisionTime": "2016-12-04T22:13:08Z"
 		},
 		{
 			"checksumSHA1": "39V1idWER42Lmcmg2Uy40wMzOlo=",
