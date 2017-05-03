@@ -25,3 +25,5 @@ _testmain.go
 
 # IDE
 .idea
+
+impala-web

@@ -1,6 +1,8 @@
 package server
 
 import (
+	"fmt"
+
 	"github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
 	"github.com/koblas/impalathing"
@@ -12,17 +14,32 @@ func Query(c *gin.Context) {
 }
 
 func PostQuery(c *gin.Context) {
+	var s string
 	q := c.PostForm("query")
 	logrus.Info(q)
+
 	res, err := impalaQuery(q)
 	if err != nil {
+		s = err.Error()
 		logrus.Error(err)
+	} else {
+		s = processRes(res)
 	}
-	logrus.Info(res)
 	c.HTML(200, "query", gin.H{
 		"query": q,
-		"res":   q,
+		"res":   s,
 	})
+}
+
+func processRes(sl []map[string]interface{}) string {
+	var s string
+	for _, v := range sl {
+		for key, value := range v {
+			s = s + key + " : " + fmt.Sprint(value) + " | "
+		}
+		s += "\n"
+	}
+	return s
 }
 
 func impalaQuery(query string) ([]map[string]interface{}, error) {
