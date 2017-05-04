@@ -92,6 +92,18 @@
 			"revisionTime": "2016-08-02T22:28:42Z"
 		},
 		{
+			"checksumSHA1": "XZ96seKtoJt55YtqPL7B6fFpDiI=",
+			"path": "github.com/lestrrat/go-file-rotatelogs",
+			"revision": "9df8b44f21785240553882138c5df2e9cc1db910",
+			"revisionTime": "2017-05-01T06:38:31Z"
+		},
+		{
+			"checksumSHA1": "zN17KECTZM56xvdBURLqpW1duYg=",
+			"path": "github.com/lestrrat/go-strftime",
+			"revision": "04ef93e285313c8978cbc7cad26d2aa7a9927451",
+			"revisionTime": "2017-01-13T11:20:00Z"
+		},
+		{
 			"checksumSHA1": "b0T0Hzd+zYk+OCDTFMps+jwa/nY=",
 			"path": "github.com/manucorporat/sse",
 			"revision": "ee05b128a739a0fb76c7ebd3ae4810c1de808d6d",
@@ -108,6 +120,12 @@
 			"path": "github.com/michelloworld/ez-gin-template",
 			"revision": "16500de79a13b17b366f23fc44f0a5e75c8e8fa8",
 			"revisionTime": "2016-11-01T12:44:17Z"
+		},
+		{
+			"checksumSHA1": "ynJSWoF6v+3zMnh9R0QmmG6iGV8=",
+			"path": "github.com/pkg/errors",
+			"revision": "ff09b135c25aae272398c51a07235b90a75aa4f0",
+			"revisionTime": "2017-03-16T20:15:38Z"
 		},
 		{
 			"checksumSHA1": "Y+HGqEkYM15ir+J93MEaHdyFy0c=",
