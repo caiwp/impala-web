@@ -5,6 +5,7 @@
     <div class="blog-header">
         <form role="form" action="/query" method="post">
             <div class="form-group">
+                <input name="_csrf" value="{{ .token }}"/>
                 <textarea class="form-control" rows="10" name="query">{{ .query }}</textarea>
             </div>
 

@@ -6,11 +6,16 @@ import (
 	"github.com/Sirupsen/logrus"
 	"github.com/gin-gonic/gin"
 	"github.com/koblas/impalathing"
+	"github.com/utrack/gin-csrf"
 )
 
 func Query(c *gin.Context) {
 	logrus.Info("query")
-	c.HTML(200, "query", gin.H{})
+	t := csrf.GetToken(c)
+
+	c.HTML(200, "query", gin.H{
+		"token": t,
+	})
 }
 
 func PostQuery(c *gin.Context) {
@@ -25,9 +30,13 @@ func PostQuery(c *gin.Context) {
 	} else {
 		s = processRes(res)
 	}
+
+	t := csrf.GetToken(c)
+
 	c.HTML(200, "query", gin.H{
 		"query": q,
 		"res":   s,
+		"token": t,
 	})
 }
 
