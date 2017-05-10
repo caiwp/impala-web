@@ -11,17 +11,23 @@ import (
 	"github.com/caiwp/impala-web/router/middleware"
 	"github.com/gin-gonic/contrib/ginrus"
 	"github.com/lestrrat/go-file-rotatelogs"
+	"github.com/caiwp/impala-web/model"
 )
 
 var (
 	port int
 
 	logPath string
+
+	user     string
+	password string
 )
 
 func init() {
 	flag.IntVar(&port, "port", 3000, "listen port")
 	flag.StringVar(&logPath, "log", "./logs", "log base path")
+	flag.StringVar(&user, "u", "root", "mysql user")
+	flag.StringVar(&password, "p", "123456", "mysql password")
 }
 
 func main() {
@@ -33,13 +39,15 @@ func main() {
 		middleware.Version,
 	)
 
-	rl, err := rotatelogs.New(logPath+"/log.%Y%m%d")
+	rl, err := rotatelogs.New(logPath + "/log.%Y%m%d")
 
 	if err != nil {
 		panic(err)
 	}
 
 	logrus.SetOutput(rl)
+
+	model.NewDB(user, password)
 
 	http.ListenAndServe(fmt.Sprintf(":%d", port), handler)
 }

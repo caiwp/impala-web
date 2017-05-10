@@ -13,7 +13,7 @@ func Query(c *gin.Context) {
 	logrus.Info("query")
 	t := csrf.GetToken(c)
 
-	c.HTML(200, "query", gin.H{
+	c.HTML(200, tplQuery, gin.H{
 		"token": t,
 	})
 }
@@ -33,7 +33,7 @@ func PostQuery(c *gin.Context) {
 
 	t := csrf.GetToken(c)
 
-	c.HTML(200, "query", gin.H{
+	c.HTML(200, tplQuery, gin.H{
 		"query": q,
 		"res":   s,
 		"token": t,
