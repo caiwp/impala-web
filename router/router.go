@@ -42,5 +42,8 @@ func Load(middlewares ...gin.HandlerFunc) http.Handler {
 	e.GET("/content", server.Content)
 	e.GET("/json", server.Json)
 
+	api := e.Group("api")
+	api.GET("/list", server.List)
+
 	return e
 }
