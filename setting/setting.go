@@ -21,6 +21,8 @@ const (
 
 var (
 	cfg *viper.Viper = viper.New()
+
+	RootPath string
 )
 
 func NewContext(c *cli.Context) error {
@@ -33,11 +35,11 @@ func NewContext(c *cli.Context) error {
 }
 
 func NewConfig(c *cli.Context) {
-	root := c.String("config")
-	f := filepath.Join(root, "local.yaml")
+	RootPath = c.String("root")
+	f := filepath.Join(RootPath, "local.yaml")
 	_, err := os.Stat(f)
 	if err != nil {
-		f = filepath.Join(root, "app.yaml")
+		f = filepath.Join(RootPath, "app.yaml")
 	}
 	cfg.SetConfigType("yaml")
 	cfg.SetConfigFile(f)

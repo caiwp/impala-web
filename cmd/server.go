@@ -23,7 +23,7 @@ var Server = cli.Command{
 	},
 	Flags: []cli.Flag{
 		cli.StringFlag{
-			Name:  "config, c",
+			Name:  "root, r",
 			Value: "./",
 		},
 		cli.IntFlag{

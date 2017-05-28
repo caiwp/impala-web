@@ -1,24 +1,38 @@
 package server
 
 import (
+	"path/filepath"
+
+	"fmt"
+
+	"github.com/caiwp/impala-web/setting"
 	"github.com/gin-contrib/multitemplate"
 )
 
-const (
-	tplLogin string = "login"
-	tplIndex string = "index"
-	tplQuery string = "query"
+var (
+	tplLogin = "login"
+	tplIndex = "index"
+	tplQuery = "query"
 
-	tplBase   string = "template/base.html"
-	tplLayout string = "template/layout.html"
+	tplBase   = "template/base.html"
+	tplLayout = "template/layout.html"
 )
 
 func CreateMyRender() multitemplate.Render {
 	r := multitemplate.New()
+	root := setting.RootPath
 
-	r.AddFromFiles(tplLogin, "template/login.html")
-	r.AddFromFiles(tplIndex, tplBase, tplLayout, "template/index.html")
-	r.AddFromFiles(tplQuery, tplBase, tplLayout, "template/query.html")
+	tplBase = filepath.Join(root, tplBase)
+	tplLayout = filepath.Join(root, tplLayout)
+
+	r.AddFromFiles(tplLogin, getHTML(tplLogin))
+	r.AddFromFiles(tplIndex, tplBase, tplLayout, getHTML(tplIndex))
+	r.AddFromFiles(tplQuery, tplBase, tplLayout, getHTML(tplQuery))
 
 	return r
+}
+
+func getHTML(s string) string {
+	t := fmt.Sprintf("template/%s.html", s)
+	return filepath.Join(setting.RootPath, t)
 }
