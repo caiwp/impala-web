@@ -38,6 +38,12 @@
 			"revisionTime": "2016-02-12T16:43:26Z"
 		},
 		{
+			"checksumSHA1": "LNRCpfkBg6CWBWbEvwFSZLFfF8g=",
+			"path": "github.com/drone/drone/shared/httputil",
+			"revision": "66b2c1e4cf2924e7ee78de830cc83d7ddfbf7632",
+			"revisionTime": "2017-04-14T12:32:50Z"
+		},
+		{
 			"checksumSHA1": "2UmMbNHc8FBr98mJFN1k8ISOIHk=",
 			"path": "github.com/garyburd/redigo/internal",
 			"revision": "4ed1111375cbeb698249ffe48dd463e9b0a63a7a",
@@ -86,6 +92,12 @@
 			"revisionTime": "2016-12-04T22:13:08Z"
 		},
 		{
+			"checksumSHA1": "42vkdsxNaLyPu+FktCzZ/8zsNSE=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "9dee4ca50b83acdf57a35fb9e6fb4be640afa2f3",
+			"revisionTime": "2017-03-27T11:30:21Z"
+		},
+		{
 			"checksumSHA1": "kBeNcaKk56FguvPSUCEaH6AxpRc=",
 			"path": "github.com/golang/protobuf/proto",
 			"revision": "2bba0603135d7d7f5cb73b2125beeda19c09f4ef",
@@ -108,6 +120,24 @@
 			"path": "github.com/gorilla/sessions",
 			"revision": "8b6b4cd75f07f7ee036eb37b8127bd40ab1efc49",
 			"revisionTime": "2017-04-29T19:22:41Z"
+		},
+		{
+			"checksumSHA1": "hA3pKaCPscFk4oqNUPUTYJrm14w=",
+			"path": "github.com/jinzhu/gorm",
+			"revision": "9acaa33324bbcc78239a1c913d4f1292c12177b9",
+			"revisionTime": "2017-05-04T14:08:37Z"
+		},
+		{
+			"checksumSHA1": "eECxSkwh0WmhLwaxHfkvcLOWS08=",
+			"path": "github.com/jinzhu/gorm/dialects/mysql",
+			"revision": "9acaa33324bbcc78239a1c913d4f1292c12177b9",
+			"revisionTime": "2017-05-04T14:08:37Z"
+		},
+		{
+			"checksumSHA1": "VIp1lZm6joWhlNdwhady8u//qRw=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "1c35d901db3da928c72a72d8458480cc9ade058f",
+			"revisionTime": "2017-01-02T12:52:26Z"
 		},
 		{
 			"checksumSHA1": "MKyEkCX61KaYI8EWK0obIM2yeN8=",
@@ -198,6 +228,12 @@
 			"path": "github.com/utrack/gin-csrf",
 			"revision": "402f6eaad1b1d5bb1225e0f1fb1b90342b79967a",
 			"revisionTime": "2017-04-09T08:14:02Z"
+		},
+		{
+			"checksumSHA1": "1MGpGDQqnUoRpv7VEcQrXOBydXE=",
+			"path": "golang.org/x/crypto/pbkdf2",
+			"revision": "0fe963104e9d1877082f8fb38f816fcd97eb1d10",
+			"revisionTime": "2017-05-16T11:44:04Z"
 		},
 		{
 			"checksumSHA1": "Y+HGqEkYM15ir+J93MEaHdyFy0c=",
