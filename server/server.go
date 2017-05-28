@@ -14,16 +14,15 @@ var (
 	tplIndex = "index"
 	tplQuery = "query"
 
-	tplBase   = "template/base.html"
-	tplLayout = "template/layout.html"
+	tplBase   = "base"
+	tplLayout = "layout"
 )
 
 func CreateMyRender() multitemplate.Render {
 	r := multitemplate.New()
-	root := setting.RootPath
 
-	tplBase = filepath.Join(root, tplBase)
-	tplLayout = filepath.Join(root, tplLayout)
+	tplBase = getHTML(tplBase)
+	tplLayout = getHTML(tplLayout)
 
 	r.AddFromFiles(tplLogin, getHTML(tplLogin))
 	r.AddFromFiles(tplIndex, tplBase, tplLayout, getHTML(tplIndex))
