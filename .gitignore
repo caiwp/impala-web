@@ -28,3 +28,4 @@ _testmain.go
 
 impala-web
 /logs
+local.yaml
