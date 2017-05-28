@@ -8,19 +8,24 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
-var db *gorm.DB
+var DB *gorm.DB
 
-func NewDB(user, password string) {
+// Init 初始化
+func Init() error {
 	var err error
-	db, err = gorm.Open("mysql", fmt.Sprintf("%s:%s@/bgy?charset=utf8&parseTime=True&loc=Local", user, password))
+
+	dsn := fmt.Sprintf("%s:%s@/bgy?charset=utf8&parseTime=True&loc=Local", "root", "123456")
+	DB, err = gorm.Open("mysql", dsn)
 	if err != nil {
-		panic(err)
+		return err
 	}
-	defer db.Close()
+	DB.AutoMigrate(&User{})
 
-	logrus.Info("open mysql")
+	admin := getAdmin()
+	logrus.Debug(admin)
+	if admin.ID == 0 {
+		CreateUser("caiwenpi@gmail.com", "123123")
+	}
 
-	db.AutoMigrate(&User{})
-
-	createAdmin()
+	return nil
 }

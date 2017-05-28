@@ -7,11 +7,10 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
+	"github.com/caiwp/impala-web/model"
 	"github.com/caiwp/impala-web/router"
 	"github.com/caiwp/impala-web/router/middleware"
 	"github.com/gin-gonic/contrib/ginrus"
-	"github.com/lestrrat/go-file-rotatelogs"
-	"github.com/caiwp/impala-web/model"
 )
 
 var (
@@ -39,15 +38,7 @@ func main() {
 		middleware.Version,
 	)
 
-	rl, err := rotatelogs.New(logPath + "/log.%Y%m%d")
-
-	if err != nil {
-		panic(err)
-	}
-
-	logrus.SetOutput(rl)
-
-	model.NewDB(user, password)
+	model.Init()
 
 	http.ListenAndServe(fmt.Sprintf(":%d", port), handler)
 }

@@ -68,3 +68,13 @@ func impalaQuery(query string) ([]map[string]interface{}, error) {
 
 	return res.FetchAll(), nil
 }
+
+func Content(c *gin.Context) {
+	c.String(200, "hello world")
+}
+
+func Json(c *gin.Context) {
+	c.JSON(200, gin.H{
+		"title": "hello world",
+	})
+}
